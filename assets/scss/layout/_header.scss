@@ -1,0 +1,633 @@
+/* ==== 
+ --------- (4.1) header styles start ---------
+ ==== */
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: transparent;
+  z-index: 99;
+  transition: $primary-transition;
+}
+
+.header__active {
+  box-shadow: $primary-shadow;
+  background-color: $white;
+}
+
+.header--secondary {
+  background-color: $white;
+}
+
+.navbar {
+  padding: 23px 0px;
+  background-color: transparent;
+  @include responsive(laptop) {
+    padding: 24px 0px;
+  }
+  @include responsive(lg) {
+    padding: 21px 0px;
+  }
+  li {
+    margin-top: 0px;
+  }
+}
+
+.navbar__active {
+  box-shadow: $primary-shadow;
+  background-color: $white;
+}
+
+.navbar-brand {
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  max-width: 140px;
+  height: auto;
+  @include responsive(xl) {
+    height: 40px;
+  }
+  @include responsive(sm) {
+    max-width: 130px;
+    height: 38px;
+  }
+}
+
+.navbar__out {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  @include responsive(sm) {
+    gap: 20px;
+  }
+}
+
+.nav__group__btn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  @include responsive(sm) {
+    gap: 20px;
+  }
+  .log {
+    color: $primary-color;
+    font-weight: 600;
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+  .button {
+    @include responsive(lg) {
+      padding: 13px 25px;
+    }
+  }
+  a {
+    @include responsive(xl) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.navbar-collapse {
+  margin-left: 60px;
+  @include responsive(xl) {
+    margin-left: 40px;
+  }
+  @include responsive(lg) {
+    margin-left: 0px;
+    margin-top: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $secondary-color;
+      border-radius: 10px;
+    }
+  }
+}
+
+.nav-item {
+  @include responsive(lg) {
+    margin-bottom: 3px;
+  }
+  @include responsive(xs) {
+    .button {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      border-radius: 0px;
+      text-align: left;
+      padding: 8px 16px;
+    }
+    &:last-of-type {
+      margin-bottom: 0px;
+      .button--last {
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+      }
+    }
+  }
+  &:nth-last-of-type(2) {
+    @include responsive(lg) {
+      margin-bottom: 0px;
+    }
+    @include responsive(xs) {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.nav-link {
+  color: $primary-color;
+  font-weight: 600;
+  padding: 8px 10px !important;
+  transition: all 0.3s ease-in;
+  @include responsive(xl) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include responsive(lg) {
+    padding: 8px 16px !important;
+    background-color: #f0f8fa;
+  }
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+
+.dropdown {
+  .dropdown-toggle {
+    color: $primary-color !important;
+    @include responsive(lg) {
+      color: $theme-color !important;
+    }
+    &:hover {
+      color: $tertiary-color !important;
+    }
+    @include responsive(lg) {
+      position: relative;
+    }
+    &::after {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      content: "\f107";
+      border: none;
+      font-size: 16px;
+      vertical-align: 0px !important;
+      @include responsive(xl) {
+        font-size: 14px;
+      }
+      @include responsive(lg) {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        margin: 0px;
+        border-left: 3px solid $white;
+      }
+    }
+  }
+  .show {
+    color: $primary-color !important;
+    transition: $primary-transition;
+    &::after {
+      transform: rotate(180deg);
+      @include responsive(lg) {
+        border-right: 3px solid $white;
+        border-left: 0px;
+      }
+    }
+    @include responsive(minScreenLaptop) {
+      color: $primary-color !important;
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .dropdown-menu {
+    margin: 0px;
+    padding: 0px;
+    background-color: $white;
+    margin-top: 0px;
+    border-top: 4px solid $secondary-color;
+    box-shadow: $primary-shadow;
+    border-radius: 0px;
+    transition: $secondary-transition;
+    max-height: 200px;
+    overflow-y: auto;
+    min-width: 14rem;
+    @include responsive(minScreenLaptop) {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f0f8fa;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $secondary-color;
+      border-radius: 10px;
+    }
+    @include responsive(lg) {
+      width: 90%;
+      margin: 15px auto;
+    }
+    .dropdown-item {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+      padding: 10px 16px;
+      color: $primary-color;
+      border-bottom: 1px solid #e4e4e4;
+      transition: $primary-transition;
+      @include responsive(xl) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &:hover {
+        background-color: $secondary-color;
+        color: $white;
+        padding-left: 20px;
+      }
+    }
+    .dropdown-item-active {
+      background-color: $quaternary-color;
+      color: $white;
+      padding-left: 20px;
+    }
+    li {
+      &:last-of-type {
+        .dropdown-item {
+          border-bottom: 0px;
+        }
+      }
+    }
+  }
+  @include responsive(minScreenLaptop) {
+    &:hover {
+      .dropdown-menu {
+        margin-top: 0px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0px;
+  line-height: 0px;
+  @include responsive(xs) {
+    margin: 0px;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  span {
+    transform: translateY(0px);
+  }
+  .icon-bar {
+    width: 35px;
+    height: 2px;
+    background-color: $secondary-color;
+    margin: 0px;
+    display: block;
+    transition: all 0.3s;
+    @include responsive(xs) {
+      width: 30px;
+    }
+  }
+  .middle-bar {
+    margin: 6px 0px;
+    opacity: 1;
+  }
+}
+
+.toggle-active {
+  .top-bar {
+    transform: rotate(-45deg) translate(-7px, 4px);
+    background: $secondary-color;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(45deg) translate(-7px, -4px);
+    background: $secondary-color;
+  }
+}
+
+// dashboard header styles start
+.dashboard-header {
+  background-color: $white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  padding: 20px 0px 19px;
+  border-bottom: 1px solid #bdbfee;
+  .dashboard-header__area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .header-logo {
+    img {
+      @include responsive(xs) {
+        max-width: 100px;
+        height: 36px;
+      }
+    }
+  }
+
+  .dashboard-header__area-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    @include responsive(md) {
+      gap: 20px;
+    }
+    @include responsive(xs) {
+      gap: 15px;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include responsive(sm) {
+        display: none;
+      }
+      img {
+        width: 30px;
+        height: 20px;
+      }
+    }
+  }
+
+  .notification-area {
+    position: relative;
+    .icon__wrapper {
+      line-height: 0px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+      i {
+        font-size: 24px;
+        color: $theme-color;
+        @include responsive(sm) {
+          font-size: 20px;
+        }
+      }
+      span {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 600;
+        color: #0f1954;
+        background-color: #f29170;
+        border-radius: 50%;
+        @include responsive(sm) {
+          font-size: 8px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .notification__wrapper {
+      position: absolute;
+      top: calc(100% + 32px);
+      right: 0%;
+      width: 276px;
+      height: 360px;
+      background-color: $primary-color;
+      border-radius: 10px;
+      visibility: hidden;
+      opacity: 0;
+      box-shadow: $primary-shadow;
+      transition: $primary-transition;
+      @include responsive(xl) {
+        top: calc(100% + 40px);
+      }
+      @include responsive(sm) {
+        right: -100px;
+        width: 240px;
+        height: 300px;
+      }
+      .notification__head {
+        padding: 12px 20px;
+        text-align: center;
+        background-color: $primary-color;
+        border-radius: 10px 10px 0px 0px;
+        @include responsive(sm) {
+          padding: 8px 15px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          color: $white;
+          @include responsive(sm) {
+            font-size: 16px;
+          }
+          &:first-of-type {
+            font-size: 16px;
+            color: $quinary-color;
+            margin-bottom: 0px;
+            font-weight: 500;
+            @include responsive(sm) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .notification__single-wrapper {
+        height: 220px;
+        overflow-y: auto;
+        background-color: $secondary-color;
+        @include responsive(sm) {
+          height: 183px;
+        }
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: $white;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $quinary-color;
+          border-radius: 10px;
+        }
+      }
+      .notification__single {
+        padding: 25px 20px 23px;
+        border-top: 1px solid #ffffff50;
+        @include responsive(sm) {
+          padding: 15px 15px 13px;
+        }
+        &:nth-of-type(1) {
+          border-top: 0px solid transparent;
+        }
+        h6 {
+          margin-bottom: 10px;
+          color: $white;
+          @include responsive(sm) {
+            margin-bottom: 5px;
+          }
+        }
+        p {
+          color: $white;
+          font-size: 14px;
+          @include responsive(sm) {
+            font-size: 12px;
+          }
+        }
+        .time {
+          margin-top: 10px;
+          text-align: right;
+          font-size: 14px;
+          @include responsive(sm) {
+            margin-top: 5px;
+          }
+        }
+      }
+      .mark__read {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 20px 20px 19px;
+        border-top: 1px solid #ffffff50;
+        text-align: right;
+        background-color: $primary-color;
+        border-radius: 0px 0px 10px 10px;
+        @include responsive(sm) {
+          padding: 15px 15px;
+        }
+        a {
+          display: inline-block;
+          line-height: 1;
+          font-size: 16px;
+          font-weight: 400;
+          color: $quinary-color;
+          @include responsive(sm) {
+            font-size: 14px;
+          }
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+    .notification__wrapper__active {
+      visibility: visible;
+      opacity: 1;
+      top: calc(100% + 42px);
+      @include responsive(xl) {
+        top: calc(100% + 30px);
+      }
+    }
+  }
+
+  .profile {
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      @include responsive(xs) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .nice-select {
+    background-color: transparent;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    height: auto !important;
+    line-height: 1 !important;
+    text-transform: uppercase;
+    padding-left: 0px;
+    padding-right: 20px;
+    .current {
+      font-weight: 600;
+    }
+    &::after {
+      width: 9px;
+      height: 9px;
+      margin-top: -7px;
+      border-color: $theme-color;
+      right: 3px;
+    }
+    .option {
+      font-size: 16px;
+      padding: 0px 15px;
+      @include responsive(sm) {
+        font-size: 14px;
+      }
+    }
+    .list {
+      min-width: 80px;
+      max-height: 230px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f0f8fa;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $secondary-color;
+        border-radius: 10px;
+      }
+      @include responsive(sm) {
+        left: unset;
+        right: 0px;
+      }
+    }
+  }
+}
+
+.dashboard-header__active {
+  background-color: $white;
+  box-shadow: $primary-shadow;
+}
+/* ==== 
+ --------- (4.1) header styles end ---------
+ ==== */

@@ -1,0 +1,523 @@
+/* ==== 
+ --------- (2.3) global styles start ---------
+ ==== */
+
+// section space
+.section__space {
+  padding: 120px 0px;
+  @include responsive(lg) {
+    padding: 100px 0px;
+  }
+  @include responsive(md) {
+    padding: 80px 0px;
+  }
+}
+
+// section space top
+.section__space__top {
+  padding-top: 120px;
+  @include responsive(lg) {
+    padding-top: 100px;
+  }
+  @include responsive(md) {
+    padding-top: 80px;
+  }
+}
+
+// section space bottom
+.section__space__bottom {
+  padding-bottom: 120px;
+  @include responsive(lg) {
+    padding-bottom: 100px;
+  }
+  @include responsive(md) {
+    padding-bottom: 80px;
+  }
+}
+
+.clear__top {
+  margin-top: 100px;
+  @include responsive(xs) {
+    margin-top: 80px;
+  }
+}
+
+// column vertical gap
+.column__space {
+  @include responsive(md) {
+    margin-bottom: 30px;
+  }
+}
+
+.column__space--secondary {
+  @include responsive(lg) {
+    margin-bottom: 30px;
+  }
+}
+
+.column__space__negative {
+  margin-bottom: 0px;
+}
+
+// section head
+.section__header {
+  @include center(1024px);
+  h5 {
+    color: $tertiary-color;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p {
+    @include center(690px);
+    text-align: center;
+  }
+}
+
+.content {
+  h5 {
+    margin-bottom: 12px;
+  }
+  h2 {
+    margin-bottom: 7px;
+    @include responsive(sm) {
+      margin-bottom: 14px;
+    }
+  }
+  .button {
+    margin-top: 36px;
+    @include responsive(lg) {
+      margin-top: 21px;
+    }
+  }
+}
+
+.progress__type {
+  .progress {
+    height: 10px;
+    border-radius: 5px;
+    @include responsive(xs) {
+      height: 7px;
+    }
+  }
+  .progress-bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: $quinary-color;
+    width: 64.73%;
+    @include responsive(xs) {
+      height: 7px;
+    }
+  }
+  .project__has {
+    margin-top: 10px;
+  }
+}
+
+.progress__type--two {
+  .project__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    @include responsive(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  }
+  .project__has {
+    margin-top: 0px;
+  }
+}
+
+.progress__type--three {
+  .collected {
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+}
+
+.invest__cta__wrapper {
+  background-color: #fbf8ff;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  @include responsive(smallLaptop) {
+    padding: 20px;
+  }
+  @include responsive(sm) {
+    padding: 20px;
+  }
+  .countdown__wrapper {
+    p {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: rgb(19, 33, 110);
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+  }
+  .invest__cta {
+    .button {
+      @include responsive(sm) {
+        padding: 8px 20px 10px;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+  }
+}
+
+.counter,
+.counterTwo {
+  color: inherit;
+}
+
+.counterFive {
+  color: inherit;
+}
+
+// countdown
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  h5 {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.shadow__effect {
+  box-shadow: $primary-shadow;
+  transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+    @include responsive(xs) {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.shadow__effect__secondary {
+  transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+    @include responsive(xs) {
+      transform: translateY(0px);
+    }
+  }
+}
+
+// social
+.social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #353c4e;
+    border: 1px solid #ffffff20;
+    border-radius: 50%;
+    transition: $primary-transition;
+    @include responsive(lg) {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+    i {
+      font-size: 16px;
+      color: $white;
+      @include responsive(lg) {
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+// position relative
+.pos__rel {
+  position: relative;
+}
+
+// overflow hidden
+.over__hi {
+  overflow: hidden;
+}
+
+// ltr direction
+.thumb__ltr {
+  direction: ltr;
+}
+
+// rtl direction
+.thumb__rtl {
+  direction: rtl;
+  @include responsive(md) {
+    direction: ltr;
+  }
+}
+
+.bg__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: right;
+}
+
+.title__with__cta {
+  margin-top: -9px;
+  @include responsive(lg) {
+    margin-top: 0px;
+  }
+  h2 {
+    @include responsive(md) {
+      margin-top: -9px;
+    }
+    @include responsive(sm) {
+      margin-top: -6px;
+    }
+  }
+  .button {
+    @include responsive(md) {
+      margin-top: 20px;
+    }
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.img__effect {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: #5927e340;
+    transform: skewX(-25deg);
+  }
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5, 0.5);
+    opacity: 0;
+  }
+}
+
+.clear__top {
+  margin-top: 100px;
+  @include responsive(lg) {
+    margin-top: 90px;
+  }
+  @include responsive(xs) {
+    margin-top: 80px;
+  }
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+// breadcrumb styles
+.breadcrumb {
+  margin: 0px;
+  padding: 0px;
+  @include responsive(sm) {
+    margin-top: 5px;
+  }
+  .breadcrumb-item {
+    margin-top: 0px;
+    color: $theme-color;
+    padding-left: 0px;
+    padding-right: 12px;
+    a {
+      font-weight: 400;
+      color: $theme-color;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    &::before {
+      float: none;
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      content: "\f178";
+      font-size: 16px;
+      color: $theme-color;
+      @include responsive(sm) {
+        font-size: 14px;
+      }
+    }
+    &:first-of-type {
+      padding-left: 0px;
+      &::before {
+        content: none;
+      }
+    }
+    &:last-of-type {
+      padding-right: 0px;
+    }
+  }
+  .active {
+    color: $theme-color;
+  }
+}
+
+.cta__btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+// pagination styles
+.pagination {
+  margin-top: 60px;
+  @include responsive(lg) {
+    margin-top: 30px;
+  }
+
+  .page-link {
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid transparent;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $theme-color;
+    font-weight: 600;
+    margin-right: 20px;
+    transition: $primary-transition;
+    box-shadow: $primary-shadow;
+    @include responsive(sm) {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      margin-right: 10px;
+      border-radius: 5px !important;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    &:hover {
+      color: $white;
+      background-color: $secondary-color;
+    }
+  }
+  .page-item {
+    &:last-of-type {
+      .page-link {
+        margin-right: 0px;
+        margin-left: 20px;
+        width: 90px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: $primary-shadow;
+        @include responsive(sm) {
+          width: 50px;
+          height: 30px;
+          border-radius: 5px !important;
+          margin-left: 5px;
+        }
+        &:hover {
+          background-color: $secondary-color;
+          color: $white;
+        }
+      }
+    }
+    &:first-of-type {
+      .page-link {
+        margin-right: 40px;
+        width: 90px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: $primary-shadow;
+        @include responsive(sm) {
+          width: 50px;
+          height: 30px;
+          border-radius: 5px !important;
+          margin-right: 15px;
+        }
+        &:hover {
+          background-color: $secondary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+/* ==== 
+ --------- (2.3) global styles end ---------
+ ==== */

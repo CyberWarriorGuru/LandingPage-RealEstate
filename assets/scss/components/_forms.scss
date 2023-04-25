@@ -1,0 +1,300 @@
+/* ==== 
+ --------- (3.3) forms styles start ---------
+ ==== */
+
+.input {
+  input {
+    width: 100%;
+    padding: 14px 30px;
+    background-color: #28334f;
+    border-radius: 10px;
+    color: $white;
+    border: 1px solid #ffffff20;
+    @include responsive(lg) {
+      padding: 12px 20px;
+    }
+    @include responsive(xs) {
+      border-radius: 5px;
+    }
+    &::placeholder {
+      color: #ffffff60;
+    }
+  }
+}
+
+.input--secondary {
+  text-align: left;
+  margin-bottom: 24px;
+  @include responsive(sm) {
+    margin-bottom: 18px;
+  }
+  label {
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  input,
+  textarea {
+    padding: 19px 30px;
+    background-color: $white;
+    color: $theme-color;
+    border: 1px solid rgb(195, 199, 228);
+    &::placeholder {
+      color: rgba($color: $theme-color, $alpha: 0.5);
+    }
+    @include responsive(lg) {
+      padding: 12px 20px;
+    }
+
+    @include responsive(xs) {
+      padding: 12px 15px;
+    }
+  }
+  textarea {
+    min-height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    overflow-y: auto;
+    @include responsive(sm) {
+      border-radius: 5px;
+      min-height: 150px;
+    }
+  }
+}
+
+.checkbox {
+  text-align: left;
+  label {
+    color: #535d96;
+    cursor: pointer;
+    position: relative;
+    padding-left: 36px;
+    a {
+      font-weight: 400;
+      color: #4508ed;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  input {
+    display: none;
+  }
+  .checkmark {
+    height: 24px;
+    width: 24px !important;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    background-color: $white;
+    box-shadow: $primary-shadow;
+    border-radius: 50%;
+  }
+  [type="checkbox"]:checked + .checkmark:before {
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.input__button {
+  .button {
+    width: 100%;
+    margin-top: 37px;
+    @include responsive(sm) {
+      margin-top: 27px;
+    }
+  }
+}
+
+.input__alt {
+  text-align: left;
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(195, 199, 228);
+    border-radius: 10px;
+    @include responsive(sm) {
+      border-radius: 5px;
+    }
+    @include responsive(xs) {
+      flex-direction: column;
+    }
+    .input-group-prepend {
+      padding-right: 30px;
+      padding-left: 30px;
+      @include responsive(xs) {
+        padding: 12px 15px;
+        width: 100%;
+        border-bottom: 1px solid rgb(195, 199, 228);
+      }
+    }
+    input {
+      width: auto;
+      flex-grow: 1;
+      border: none;
+      border-left: 1px solid rgb(195, 199, 228);
+      font-weight: 600;
+      @include responsive(xs) {
+        flex-grow: 0;
+        border-left: 0px;
+        width: 100%;
+        margin-bottom: 2px;
+      }
+      &::placeholder {
+        font-weight: 600;
+        color: $theme-color;
+      }
+    }
+    .nice-select {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      height: auto !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      padding-right: 34px;
+      @include responsive(xs) {
+        padding-right: 20px;
+      }
+      &::after {
+        width: 10px;
+        height: 10px;
+        margin-top: -7px;
+        border-color: $theme-color;
+        right: 0px;
+        @include responsive(xs) {
+          width: 8px;
+          height: 8px;
+          margin-top: -6px;
+        }
+      }
+      .current {
+        color: $theme-color;
+        font-weight: 600;
+        text-transform: capitalize;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "";
+          width: 30px;
+          height: 16px;
+          background-image: url("../images/flag.png");
+          background-size: cover;
+          margin-right: 10px;
+          color: #434e9e80;
+          @include responsive(xs) {
+            margin-right: 5px;
+          }
+        }
+      }
+      .list {
+        position: absolute;
+        top: 100%;
+        background-color: $secondary-color;
+        box-shadow: 0px 4px 24px 0px rgba(19, 33, 110, 1);
+        max-height: 300px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #e4e4e4;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $primary-color;
+          border-radius: 10px;
+        }
+        @include responsive(xs) {
+          min-width: 60px;
+        }
+        &:hover {
+          .selected {
+            color: $white;
+          }
+        }
+      }
+      .option {
+        background-color: $secondary-color;
+        color: $white;
+        min-height: auto;
+        line-height: 28px;
+        padding: 8px 16px;
+        text-transform: capitalize;
+        font-weight: 600;
+        text-align: left;
+        font-size: 16px;
+        @include responsive(xs) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        &:hover {
+          background-color: $white;
+          color: $primary-color;
+        }
+      }
+      .selected {
+        font-weight: 400;
+        color: $white;
+        &:hover {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+}
+
+.input__file__wrapper {
+  p {
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+}
+
+.input__file {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f9faff;
+  border: 1px dashed #c3c7e4;
+  border-radius: 10px;
+  @include responsive(lg) {
+    padding: 40px 30px;
+  }
+  @include responsive(lg) {
+    padding: 30px 20px;
+  }
+  span {
+    font-weight: 700;
+    color: $secondary-color;
+  }
+  .icon__box {
+    width: 70px;
+    height: 70px;
+    background-color: #d7defc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+  }
+}
+/* ==== 
+ --------- (3.3) forms styles end ---------
+ ==== */

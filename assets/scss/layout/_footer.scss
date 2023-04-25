@@ -1,0 +1,397 @@
+/* ==== 
+ --------- (4.5) footer styles start ---------
+ ==== */
+
+.footer {
+  background-color: #1e263a;
+  z-index: 1;
+}
+
+.footer__newsletter {
+  padding: 50px 0px 56px;
+  border-bottom: 1px solid #ffffff20;
+  @include responsive(lg) {
+    padding: 50px 0px;
+  }
+  @include responsive(md) {
+    padding: 35px 0px 40px;
+  }
+}
+
+.footer__newsletter__content {
+  h3,
+  p {
+    color: $white;
+  }
+  p {
+    margin-top: 12px;
+  }
+  @include responsive(xs) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__newsletter__input__group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  @include responsive(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input {
+    flex-grow: 1;
+    @include responsive(sm) {
+      width: 100%;
+    }
+  }
+  .button {
+    width: 196px;
+    padding: 14px 30px;
+    height: 60px;
+    @include responsive(lg) {
+      width: 170px;
+      height: auto;
+      padding: 12px 20px;
+    }
+  }
+}
+
+.footer__intro {
+  @include responsive(md) {
+    margin-bottom: 33px;
+    width: 80%;
+  }
+  @include responsive(sm) {
+    width: 100%;
+  }
+  p {
+    color: $white;
+    font-weight: 400;
+    margin-top: 23px;
+    @include responsive(xl) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  .social {
+    margin-top: 28px;
+    @include responsive(xl) {
+      margin-top: 18px;
+    }
+    a {
+      @include responsive(xl) {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
+      i {
+        @include responsive(xl) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.footer__links {
+  h5 {
+    font-weight: 600;
+    color: $white;
+  }
+  ul {
+    margin-top: 25px;
+    @include responsive(sm) {
+      margin-top: 15px;
+    }
+  }
+  li {
+    border-bottom: 1px solid #ffffff20;
+    &:last-of-type {
+      border-bottom: 0px;
+      a {
+        padding-bottom: 0px;
+      }
+    }
+    &:first-of-type {
+      a {
+        padding-top: 0px;
+      }
+    }
+    a {
+      font-weight: 400;
+      color: $white;
+      padding: 10px 0px;
+      display: block;
+      @include responsive(xl) {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 8px 0px;
+      }
+      &:hover {
+        color: $white;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.footer__links--alt {
+  @include responsive(sm) {
+    margin-bottom: 35px;
+  }
+}
+
+.footer__links--alt--two {
+  @include responsive(xs) {
+    margin-bottom: 35px;
+  }
+}
+
+.footer__credit {
+  padding: 25px 0px;
+  border-top: 1px solid #ffffff20;
+  @include responsive(lg) {
+    padding: 20px 0px;
+  }
+}
+
+.footer__copyright {
+  p {
+    color: $white;
+    @include responsive(xs) {
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    a {
+      font-weight: 400;
+      color: #26dd77;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.footer__language {
+  display: flex;
+  justify-content: flex-end;
+  @include responsive(xs) {
+    justify-content: flex-start;
+    margin-top: 4px;
+  }
+  .nice-select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: auto !important;
+    line-height: inherit !important;
+    padding-left: 0px;
+    padding-right: 20px;
+    @include responsive(xs) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &::after {
+      width: 10px;
+      height: 10px;
+      margin-top: -7px;
+      border-color: $white;
+      right: 4px;
+      @include responsive(xs) {
+        width: 8px;
+        height: 8px;
+        margin-top: -6px;
+      }
+    }
+    .current {
+      color: $white;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      &::before {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        content: "\f0ac";
+        font-size: 18px;
+        margin-right: 10px;
+        @include responsive(xs) {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .list {
+      position: absolute;
+      top: unset;
+      bottom: 100%;
+      background-color: $primary-color;
+      box-shadow: 0px 4px 24px 0px rgba(19, 33, 110, 0.5);
+      min-width: 70px;
+      @include responsive(xs) {
+        min-width: 60px;
+      }
+      &:hover {
+        .selected {
+          color: $white;
+        }
+      }
+    }
+    .option {
+      background-color: $primary-color;
+      color: $white;
+      min-height: auto;
+      line-height: 28px;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 16px;
+      @include responsive(xs) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &:hover {
+        background-color: $white;
+        color: $primary-color;
+      }
+    }
+    .selected {
+      font-weight: 400;
+      color: $primary-color;
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+  }
+}
+
+.footer__animation {
+  img {
+    position: absolute;
+    height: auto;
+    z-index: -1;
+  }
+  .left__circle {
+    left: 0px;
+    top: 30px;
+    max-width: 16vw;
+    opacity: 0.3;
+  }
+  .right__circle {
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.4;
+    max-width: 15vw;
+  }
+  .home__illustration {
+    left: 0px;
+    bottom: 0px;
+    max-width: 25vw;
+    opacity: 0.5;
+    @include responsive(xs) {
+      max-width: 30vw;
+      left: 30vw;
+    }
+  }
+}
+
+// dahsboard footer section styles start
+.dashboard-footer {
+  background-color: #f6f6ff;
+
+  .footer__intro {
+    p {
+      color: $theme-color;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 280px;
+      margin-top: 23px;
+      @include responsive(xl) {
+        margin-top: 25px;
+      }
+      @include responsive(lg) {
+        margin-top: 22px;
+      }
+      &:nth-last-of-type(2) {
+        margin-top: 13px;
+      }
+      &:nth-last-of-type(1) {
+        margin-top: 6px;
+        @include responsive(xl) {
+          margin-top: 11px;
+        }
+        @include responsive(lg) {
+          margin-top: 11px;
+        }
+      }
+      i {
+        font-size: 16px;
+        color: $tertiary-color;
+      }
+    }
+  }
+
+  h5 {
+    color: $theme-color;
+  }
+  .footer__links {
+    a {
+      color: $theme-color;
+      padding: 6px 0px;
+      &:hover {
+        color: $quinary-color;
+      }
+    }
+  }
+  .footer__credit {
+    border-color: #c9c9df;
+    @include responsive(sm) {
+      padding: 15px 0px 25px;
+    }
+  }
+  .footer__copyright {
+    p {
+      color: $theme-color;
+      @include responsive(sm) {
+        text-align: center;
+      }
+      a {
+        color: $theme-color;
+        &:hover {
+          color: $quinary-color;
+        }
+      }
+    }
+  }
+  .social {
+    gap: 20px;
+    justify-content: flex-end;
+    @include responsive(sm) {
+      justify-content: center;
+      margin-top: 10px;
+    }
+    a {
+      background-color: transparent;
+      padding: 0px;
+      width: auto;
+      height: auto;
+      i {
+        color: #8181ac;
+        transition: $primary-transition;
+      }
+      &:hover {
+        i {
+          color: $tertiary-color;
+        }
+      }
+    }
+  }
+}
+/* ==== 
+ --------- (4.5) footer styles end ---------
+ ==== */

@@ -1,0 +1,259 @@
+/* ==== 
+ --------- (2.2) typography styles start ---------
+ ==== */
+
+// paragraph styles
+p,
+th,
+td,
+li,
+input,
+textarea,
+select,
+label,
+blockquote,
+span {
+  @include font(18px, 30px, 400, $theme-color);
+  &.neutral-top {
+    margin-top: -7px;
+    @include responsive(sm) {
+      margin-top: -5px;
+    }
+  }
+  &.neutral-bottom {
+    margin-bottom: -4px;
+    @include responsive(sm) {
+      margin-bottom: -5px;
+    }
+  }
+  @include responsive(sm) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  &.primary {
+    font-size: 24px;
+    line-height: 36px;
+    @include responsive(lg) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include responsive(sm) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &.secondary {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  &.secondary-neutral-top {
+    margin-top: -4px;
+  }
+  &.secondary-neutral-bottom {
+    margin-bottom: -2px;
+  }
+  &.tertiary {
+    font-size: 26px;
+    line-height: 36px;
+    @include responsive(lg) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include responsive(sm) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &.tertiary-neutral-top {
+    margin-top: -9px;
+    @include responsive(sm) {
+      margin-top: -7px;
+    }
+  }
+  &.tertiary-neutral-bottom {
+    margin-bottom: -2px;
+    @include responsive(sm) {
+      margin-bottom: -3px;
+    }
+  }
+}
+
+//  heading styles
+h1,
+h1 > a,
+h1 > span {
+  @include font(76px, 99px, 700, $theme-color);
+  &.neutral-top {
+    margin-top: -16px;
+  }
+  &.neutral-bottom {
+    margin-bottom: -2px;
+  }
+  @include responsive(lg) {
+    font-size: 57px;
+    line-height: 74px;
+    &.neutral-top {
+      margin-top: -12px;
+    }
+    &.neutral-bottom {
+      margin-bottom: -1px;
+    }
+  }
+  @include responsive(sm) {
+    font-size: 36px;
+    line-height: 50px;
+    &.neutral-top {
+      margin-top: -10px;
+    }
+    &.neutral-bottom {
+      margin-bottom: -3px;
+    }
+  }
+}
+
+h2,
+h2 > a,
+h2 > span {
+  @include font(57px, 74px, 700, $theme-color);
+  &.neutral-top {
+    margin-top: -12px;
+  }
+  &.neutral-bottom {
+    margin-bottom: -1px;
+  }
+  @include responsive(lg) {
+    font-size: 43px;
+    line-height: 56px;
+    &.neutral-top {
+      margin-top: -9px;
+    }
+  }
+  @include responsive(sm) {
+    font-size: 28px;
+    line-height: 38px;
+    &.neutral-top {
+      margin-top: -7px;
+    }
+  }
+}
+
+h2 > span {
+  color: $tertiary-color;
+}
+
+h3,
+h3 > a,
+h3 > span {
+  @include font(43px, 56px, 700, $theme-color);
+  &.neutral-top {
+    margin-top: -9px;
+  }
+  &.neutral-bottom {
+    margin-bottom: -1px;
+  }
+  @include responsive(lg) {
+    font-size: 32px;
+    line-height: 42px;
+    &.neutral-top {
+      margin-top: -7px;
+    }
+  }
+  @include responsive(sm) {
+    font-size: 24px;
+    line-height: 32px;
+    &.neutral-top {
+      margin-top: -5px;
+    }
+  }
+}
+
+h4,
+h4 > a,
+h4 > .counterThree {
+  @include font(32px, 42px, 700, $theme-color);
+  &.neutral-top {
+    margin-top: -7px;
+  }
+  &.neutral-bottom {
+    margin-bottom: -1px;
+  }
+  @include responsive(lg) {
+    font-size: 24px;
+    line-height: 32px;
+    &.neutral-top {
+      margin-top: -5px;
+    }
+  }
+  @include responsive(sm) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+h5,
+h5 > a,
+h5 > span {
+  @include font(24px, 32px, 700, $tertiary-color);
+  &.neutral-top {
+    margin-top: -5px;
+  }
+  &.neutral-bottom {
+    margin-bottom: -1px;
+  }
+  @include responsive(lg) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @include responsive(sm) {
+    font-size: 18px;
+    line-height: 24px;
+    &.neutral-top {
+      margin-top: -4px;
+    }
+  }
+}
+
+h6,
+h6 > a {
+  @include font(18px, 24px, 600, $theme-color);
+  &.neutral-top {
+    margin-top: -4px;
+  }
+  &.neutral-bottom {
+    margin-bottom: -1px;
+  }
+  @include responsive(sm) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+// link styles
+a,
+button {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $poppins;
+  text-decoration: none;
+  color: $white;
+  font-weight: 600;
+  display: inline-block;
+  border: 0px;
+  outline: 0px;
+  transition: $primary-transition;
+  @include responsive(lg) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $theme-color;
+    border: 0px;
+    outline: 0px;
+  }
+}
+
+/* ==== 
+ --------- (2.2) typography styles end ---------
+ ==== */

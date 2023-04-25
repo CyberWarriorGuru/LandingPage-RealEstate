@@ -1,0 +1,187 @@
+/* ==== 
+ --------- (4.3) banner styles start ---------
+ ==== */
+.banner {
+  padding: 96px 0px 295px;
+  background-color: #93abf0;
+  @include responsive(md) {
+    padding: 76px 0px 275px;
+  }
+}
+
+.banner--secondary {
+  padding: 196px 0px 196px;
+  position: relative;
+  @include responsive(lg) {
+    padding: 120px 0px 116px;
+  }
+  @include responsive(md) {
+    padding: 100px 0px 96px;
+  }
+  .banner__thumb {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    max-width: 41vw;
+    height: auto;
+    @include responsive(xs) {
+      max-width: 48vw;
+    }
+  }
+}
+
+.banner--tertiary {
+  padding: 96px 0px 235px;
+  background-color: #93abf0;
+  @include responsive(md) {
+    padding: 76px 0px 215px;
+  }
+  h1 {
+    margin-bottom: 20px;
+    @include responsive(md) {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.banner__application {
+  padding: 120px 0px 260px;
+  @include responsive(lg) {
+    padding: 100px 0px 240px;
+  }
+  @include responsive(md) {
+    padding: 80px 0px 215px;
+  }
+}
+
+.support__banner {
+  padding-top: 137px;
+  background-size: cover;
+  @include responsive(lg) {
+    padding-top: 100px;
+  }
+  @include responsive(md) {
+    padding-top: 80px;
+  }
+  .support__banner__inner {
+    @include center(860px);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  h5 {
+    text-align: center;
+    color: $theme-color;
+  }
+  .input {
+    margin-bottom: 0px;
+  }
+  .faq__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 132px;
+    padding-bottom: 30px;
+    @include responsive(lg) {
+      margin-top: 95px;
+      gap: 15px;
+    }
+    @include responsive(md) {
+      margin-top: 75px;
+    }
+    .faq__tab__btn {
+      color: $theme-color;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    .faq__tab__btn__active {
+      color: $secondary-color;
+    }
+  }
+}
+
+.contact__banner {
+  padding: 100px 0px 270px;
+  @include responsive(md) {
+    padding: 80px 0px 250px;
+  }
+}
+
+.banner-three {
+  padding: 116px 0px 295px;
+  @include responsive(lg) {
+    padding: 96px 0px 275px;
+  }
+  @include responsive(md) {
+    padding: 76px 0px 255px;
+  }
+}
+
+.key-banner {
+  h1 {
+    margin-bottom: 20px;
+    @include responsive(lg) {
+      margin-bottom: 19px;
+    }
+    @include responsive(sm) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.blog-banner {
+  .banner__thumb {
+    max-width: 27vw;
+    right: 5%;
+    @include responsive(xl) {
+      max-width: 30vw;
+    }
+  }
+}
+
+.blog__single__banner {
+  height: 630px;
+  background-color: #f3efff;
+  background-size: cover;
+  background-position: top -90px center;
+  @include responsive(lg) {
+    height: 400px;
+    background-position: top 0px center;
+  }
+  @include responsive(md) {
+    height: 260px;
+  }
+}
+
+.neut {
+  margin-bottom: -20px;
+  margin-top: -7px;
+  @include responsive(lg) {
+    margin-bottom: -16px;
+    margin-top: -5px;
+  }
+  @include responsive(sm) {
+    margin-bottom: -11px;
+    margin-top: -2px;
+  }
+}
+
+.terms__banner {
+  .banner__thumb {
+    @include responsive(xl) {
+      max-width: 27vw;
+      height: auto;
+    }
+    @include responsive(xs) {
+      max-width: 35vw;
+    }
+  }
+}
+
+/* ==== 
+ --------- (4.3) banner styles end ---------
+ ==== */

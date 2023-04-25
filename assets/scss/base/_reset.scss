@@ -1,0 +1,126 @@
+/* ==== 
+ --------- (2.1) reset styles start ---------
+ ==== */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $theme-font;
+  color: $theme-color;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 0px;
+  background-color: $theme-bg;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #cae6f7;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border-radius: 5px;
+  }
+  @include responsive(lg) {
+    font-size: 16px;
+  }
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: #07286e;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #07286e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+  font-family: $poppins;
+}
+
+a {
+  text-decoration: none;
+  img {
+    border: none;
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+    img {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+button {
+  border: 0;
+  outline: 0;
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 0px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+/* ==== 
+ --------- (2.1) reset styles end ---------
+ ==== */

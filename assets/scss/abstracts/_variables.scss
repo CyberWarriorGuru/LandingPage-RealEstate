@@ -1,0 +1,36 @@
+/* ==== 
+ --------- (1.2) variables start ---------
+ ==== */
+
+// Poppins google font source
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// font family
+$poppins: "Poppins", sans-serif;
+
+// theme default
+$theme-font: $poppins;
+$theme-bg: #ffffff;
+$theme-color: #13216e;
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$primary-color: #0c266c;
+$secondary-color: #5927e3;
+$tertiary-color: #4e0dff;
+$quaternary-color: #265a42;
+$quinary-color: #2dca73;
+
+// transitions
+$primary-transition: all 0.3s ease-out;
+$secondary-transition: all 0.4s ease-in;
+
+// box shadow
+$primary-shadow: 0px 4px 24px 0px rgba(19, 33, 110, 0.25);
+$secondary-shadow: 0px 4px 24px 0px rgba(89, 39, 227, 0.25);
+$hover-shadow: 0px 10px 24px 0px rgba(89, 39, 227, 0.8);
+
+/* ==== 
+ --------- (1.2) variables end ---------
+ ==== */

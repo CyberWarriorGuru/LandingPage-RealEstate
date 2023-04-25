@@ -1,0 +1,138 @@
+/* ==============
+ ========= Css Documentation =========
+
+ Template Name: Revest
+ Version: 1.0
+ Description: Real Estate Investment For Everyone
+ Author: Pixelaxis
+ Author URI: https://themeforest.net/user/pixelaxis
+
+ 01. Abstracts
+     1.1 --> Mixins
+     1.2 --> Variables
+    
+ 02. Base
+     2.1 --> Reset
+     2.2 --> Typography
+     2.3 --> Global
+
+ 03. Components
+     3.1 --> Preloader
+     3.2 --> Buttons
+     3.3 --> Forms
+
+ 04. Layout
+     4.1 --> Header
+     4.2 --> Hero Section
+     4.3 --> Banner
+     4.4 --> All Sections
+     4.5 --> Footer
+
+     =========================
+     01. header styles start
+     ------------------------------------------------------
+     02. banner styles start
+     ------------------------------------------------------
+     03. hero section styles start
+     ------------------------------------------------------
+     04. property filter styles start
+     ------------------------------------------------------
+     05. featured property styles start
+     ------------------------------------------------------
+     06. all properties in grid styles start
+     ------------------------------------------------------
+     07. profit overview section styles start
+     ------------------------------------------------------
+     08. start step section styles start
+     ------------------------------------------------------
+     09. video section styles start
+     ------------------------------------------------------
+     10. numbers section styles start
+     ------------------------------------------------------
+     11. market section styles start
+     ------------------------------------------------------
+     12. testimonial section styles start
+     ------------------------------------------------------
+     13. cities section styles start
+     ------------------------------------------------------
+     14. platform section styles start
+     ------------------------------------------------------
+     15. portfolio section styles start
+     ------------------------------------------------------
+     16. why invest section styles start
+     ------------------------------------------------------
+     17. community section styles start
+     ------------------------------------------------------
+     18. why invest two seciton styles start
+     ------------------------------------------------------
+     19. about pages video section styles start
+     ------------------------------------------------------
+     20. team section styles start
+     ------------------------------------------------------
+     21. open job section styles start
+     ------------------------------------------------------
+     22. open position tab section styles start
+     ------------------------------------------------------
+     23. position details section styles start
+     ------------------------------------------------------
+     24. property alert newsletter section styles start
+     ------------------------------------------------------
+     25. banner alt section styles start
+     ------------------------------------------------------
+     26. investment amount section styles start
+     ------------------------------------------------------
+     27. faq section styles start
+     ------------------------------------------------------
+     28. list overview sections styles start
+     ------------------------------------------------------
+     29. work two section styles start
+     ------------------------------------------------------
+     30. contact overview seciton styles start
+     ------------------------------------------------------
+     31. ask section styles start
+     ------------------------------------------------------
+     32. program section styles start
+     ------------------------------------------------------
+     33. step two section style start
+     ------------------------------------------------------
+     34. blog page styles start
+     ------------------------------------------------------
+     35. latest post section styles start
+     ------------------------------------------------------
+     36. browse all post section styles start
+     ------------------------------------------------------
+     37. property filter area two
+     ------------------------------------------------------
+     38. property details page styles start
+     ------------------------------------------------------
+     39. gallery two section styles start
+     ------------------------------------------------------
+     40. registration pages styles start
+     ------------------------------------------------------
+     41. error section styles start
+     ------------------------------------------------------
+     42. footer styles start
+     
+     =========================
+============== */
+
+// abstract styles
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// base styles
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/global";
+
+// components styles
+@import "./components/preloader";
+@import "./components/buttons";
+@import "./components/forms";
+
+// layout styles
+@import "./layout/header";
+@import "./layout/hero-section";
+@import "./layout/banner";
+@import "./layout/sections";
+@import "./layout/footer";
